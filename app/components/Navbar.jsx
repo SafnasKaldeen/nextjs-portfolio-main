@@ -6,6 +6,7 @@ import React, { useState } from "react";
 import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
+import { Raleway } from "next/font/google";
 
 const navLinks = [
   {
@@ -30,7 +31,7 @@ const Navbar = () => {
       <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
         <Link
           href={"/"}
-          className="text-2xl md:text-5xl text-white font-semibold"
+          className="font-raleway text-2xl md:text-5xl text-white font-semibold  hover:text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600 hover:border-white"
         >
           Home
         </Link>

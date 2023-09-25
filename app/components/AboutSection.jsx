@@ -11,12 +11,12 @@ const TAB_DATA = [
     id: "skills",
     content: (
       <ul className="list-disc pl-2">
-        <li>Node.js</li>
-        <li>Express</li>
-        <li>PostgreSQL</li>
-        <li>Sequelize</li>
-        <li>JavaScript</li>
-        <li>React</li>
+        <li className="hover:list-none">Node.js</li>
+        <li className="hover:list-none">Express</li>
+        <li className="hover:list-none">PostgreSQL</li>
+        <li className="hover:list-none">Sequelize</li>
+        <li className="hover:list-none">JavaScript</li>
+        <li className="hover:list-none">React</li>
       </ul>
     ),
   },
@@ -58,7 +58,7 @@ const AboutSection = () => {
         <Image src="/images/about-image.png" width={500} height={500} />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
-          <p className="text-base lg:text-lg">
+          <p className="text-base lg:text-lg font-light font-sans">
             I am a full stack web developer with a passion for creating
             interactive and responsive web applications. I have experience
             working with JavaScript, React, Redux, Node.js, Express, PostgreSQL,

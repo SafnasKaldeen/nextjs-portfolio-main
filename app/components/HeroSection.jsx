@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
@@ -36,12 +37,11 @@ const HeroSection = () => {
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
             I am a Student of University of Moratuwa and a Full Stack Developer
-            &nbsp; with a special in Data Science. Here you can check out my
-            projects.
+            with a special in Data Science. Here you can check out my projects.
           </p>
           <div>
             <Link
-              href="/contact"
+              href="/Contact"
               className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white"
             >
               Hire Me

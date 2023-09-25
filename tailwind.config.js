@@ -20,6 +20,11 @@ module.exports = {
       primary: colors.purple,
       secondary: colors.blue,
     },
+    FontFace: {
+      sans: ["Mooli", "ui-sans-serif", "system-ui"],
+      serif: ["ui-serif", "Georgia"],
+      mono: ["ui-monospace", "SFMono-Regular"],
+    },
   },
   plugins: [],
 };
