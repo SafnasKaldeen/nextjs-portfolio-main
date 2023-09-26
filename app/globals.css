@@ -28,6 +28,6 @@ body {
 
 @layer base {
   html {
-    font-family: system-ui, sans-serif;
+    font-family: "Roboto Slab", Arial, sans-serif;
   }
-}
+} 

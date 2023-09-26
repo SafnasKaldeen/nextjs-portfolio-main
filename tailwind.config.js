@@ -21,7 +21,7 @@ module.exports = {
       secondary: colors.blue,
     },
     FontFace: {
-      sans: ["Mooli", "ui-sans-serif", "system-ui"],
+      sans: ["Algerian", "ui-sans-serif", "system-ui"],
       serif: ["ui-serif", "Georgia"],
       mono: ["ui-monospace", "SFMono-Regular"],
     },

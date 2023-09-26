@@ -4,6 +4,7 @@
 import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
+import { Roboto } from "next/font/google";
 
 const TAB_DATA = [
   {
@@ -11,12 +12,16 @@ const TAB_DATA = [
     id: "skills",
     content: (
       <ul className="list-disc pl-2">
-        <li className="hover:list-none">Node.js</li>
+        <li className="hover:list-none">HTML</li>
+        <li className="hover:list-none">CSS</li>
+        <li className="hover:list-none">VanilaJS</li>
+        <li className="hover:list-none">NodeJS</li>
         <li className="hover:list-none">Express</li>
-        <li className="hover:list-none">PostgreSQL</li>
-        <li className="hover:list-none">Sequelize</li>
-        <li className="hover:list-none">JavaScript</li>
-        <li className="hover:list-none">React</li>
+        <li className="hover:list-none">RectJS</li>
+        <li className="hover:list-none">NextJS</li>
+        <li className="hover:list-none">Prisma</li>
+        <li className="hover:list-none">HandleBars</li>
+        <li className="hover:list-none">MySQL</li>
       </ul>
     ),
   },
@@ -25,8 +30,10 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc pl-2">
-        <li>Fullstack Academy of Code</li>
-        <li>University of California, Santa Cruz</li>
+        <li className="hover:list-none">Fullstack Academy of Code</li>
+        <li className="hover:list-none">
+          University of California, Santa Cruz
+        </li>
       </ul>
     ),
   },
@@ -35,8 +42,8 @@ const TAB_DATA = [
     id: "certifications",
     content: (
       <ul className="list-disc pl-2">
-        <li>AWS Cloud Practitioner</li>
-        <li>Google Professional Cloud Developer</li>
+        <li className="hover:list-none">AWS Cloud Practitioner</li>
+        <li className="hover:list-none">Google Professional Cloud Developer</li>
       </ul>
     ),
   },
@@ -58,13 +65,15 @@ const AboutSection = () => {
         <Image src="/images/about-image.png" width={500} height={500} />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
-          <p className="text-base lg:text-lg font-light font-sans">
+          <p className="text-base lg:text-lg font-light">
             I am a full stack web developer with a passion for creating
-            interactive and responsive web applications. I have experience
-            working with JavaScript, React, Redux, Node.js, Express, PostgreSQL,
-            Sequelize, HTML, CSS, and Git. I am a quick learner and I am always
-            looking to expand my knowledge and skill set. I am a team player and
-            I am excited to work with others to create amazing applications.
+            interactive and responsive web applications and mobile Applications.
+            I have experience working with JavaScript, ReactJS, NextJS, Node.js,
+            Express, MySQL, Prisma, HTML, CSS, HandleBars and Git. I am a quick
+            learner and I am always looking to expand my knowledge and skill
+            set. I am a team player and I am excited to work with others to
+            create amazing applications. I also have experience with data
+            science and machine learning. I have worked with Python, Pandas,
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
