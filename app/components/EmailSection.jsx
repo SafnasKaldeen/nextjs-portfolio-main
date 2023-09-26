@@ -1,6 +1,8 @@
 import React from "react";
 import GithubIcon from "../../public/github-icon.svg";
 import LinkedinIcon from "../../public/linkedin-icon.svg";
+import InstagramIcon from "../../public/insta-icon.svg";
+import fbIcon from "../../public/fb-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -22,11 +24,20 @@ const EmailSection = () => {
           try my best to get back to you!
         </p>
         <div className="socials flex flex-row gap-2">
-          <Link href="github.com">
+          <Link href="https://github.com/SafnasKaldeen">
             <Image src={GithubIcon} alt="Github Icon" />
           </Link>
-          <Link href="linkedin.com">
-            <Image src={LinkedinIcon} alt="Linkedin Icon" />
+          <Link href="https://www.linkedin.com/in/safnas-kaldeen">
+            <Image src={LinkedinIcon} alt="LinkedIn Icon" />
+          </Link>
+          <Link href="Instagram.com">
+            <Image
+              src={InstagramIcon}
+              alt="https://www.instagram.com/safnas_kaldeen/"
+            />
+          </Link>
+          <Link href="https://www.facebook.com/mohammed.safnas.7330/">
+            <Image src={fbIcon} alt="fbIcon" />
           </Link>
         </div>
       </div>
@@ -44,7 +55,7 @@ const EmailSection = () => {
               id="email"
               required
               className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-              placeholder="jacob@google.com"
+              placeholder="safnasthegreat@google.com"
             />
           </div>
           <div className="mb-6">

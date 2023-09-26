@@ -7,13 +7,13 @@ const variants = {
 };
 
 const TabButton = ({ active, selectTab, children }) => {
-  const buttonClasses = active ? "text-white" : "text-[#ADB7BE]";
+  const buttonClasses = active
+    ? "text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600 hover:border-white"
+    : "text-white";
 
   return (
     <button onClick={selectTab}>
-      <p className={`mr-3 font-semibold hover:text-white ${buttonClasses}`}>
-        {children}
-      </p>
+      <p className={`mr-3 font-semibold ${buttonClasses}`}>{children}</p>
       <motion.div
         animate={active ? "active" : "default"}
         variants={variants}

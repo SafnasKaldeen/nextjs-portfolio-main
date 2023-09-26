@@ -30,4 +30,7 @@ body {
   html {
     font-family: "Roboto Slab", Arial, sans-serif;
   }
+  .svg-hover:hover {
+    fill: #FF0000; /* Change to the desired hover color (e.g., red) */
+  }
 } 
