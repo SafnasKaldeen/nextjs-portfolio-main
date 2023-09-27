@@ -30,11 +30,8 @@ const EmailSection = () => {
           <Link href="https://www.linkedin.com/in/safnas-kaldeen">
             <Image src={LinkedinIcon} alt="LinkedIn Icon" />
           </Link>
-          <Link href="Instagram.com">
-            <Image
-              src={InstagramIcon}
-              alt="https://www.instagram.com/safnas_kaldeen/"
-            />
+          <Link href="https://www.instagram.com/safnas_kaldeen/">
+            <Image src={InstagramIcon} alt="Instagram Icon" />
           </Link>
           <Link href="https://www.facebook.com/mohammed.safnas.7330/">
             <Image src={fbIcon} alt="fbIcon" />
@@ -42,7 +39,7 @@ const EmailSection = () => {
         </div>
       </div>
       <div className="z-10">
-        <form method="POST" className="flex flex-col">
+        <form method="POST" action="/api/submitForm" className="flex flex-col">
           <div className="mb-6">
             <label
               htmlFor="email"
@@ -54,6 +51,7 @@ const EmailSection = () => {
               type="email"
               id="email"
               required
+              name="email"
               className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
               placeholder="safnasthegreat@google.com"
             />
@@ -69,6 +67,7 @@ const EmailSection = () => {
               type="text"
               id="subject"
               required
+              name="subject"
               className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
               placeholder="Just saying hi"
             />
@@ -89,7 +88,6 @@ const EmailSection = () => {
           </div>
           <button
             type="submit"
-            disabled={!values.name || !values.email || !values.message}
             className="bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
           >
             Send Message
