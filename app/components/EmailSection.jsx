@@ -42,7 +42,7 @@ const EmailSection = () => {
         </div>
       </div>
       <div className="z-10">
-        <form className="flex flex-col">
+        <form method="POST" className="flex flex-col">
           <div className="mb-6">
             <label
               htmlFor="email"
@@ -89,6 +89,7 @@ const EmailSection = () => {
           </div>
           <button
             type="submit"
+            disabled={!values.name || !values.email || !values.message}
             className="bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
           >
             Send Message

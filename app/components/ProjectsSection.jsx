@@ -8,7 +8,7 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "React Portfolio Website",
+    title: "Portfolio Website",
     description: "Project 1 description",
     image: "/images/projects/1.jpg",
     tag: ["All", "Web"],
@@ -17,7 +17,7 @@ const projectsData = [
   },
   {
     id: 2,
-    title: "Potography Portfolio Website",
+    title: "UBC Website",
     description: "Project 2 description",
     image: "/images/projects/2.jpg",
     tag: ["All", "Web"],
@@ -26,7 +26,7 @@ const projectsData = [
   },
   {
     id: 3,
-    title: "E-commerce Application",
+    title: "Gear Glide",
     description: "Project 3 description",
     image: "/images/projects/3.jpg",
     tag: ["All", "Web"],
@@ -35,7 +35,7 @@ const projectsData = [
   },
   {
     id: 4,
-    title: "Food Ordering Application",
+    title: "Email CLient Application",
     description: "Project 4 description",
     image: "/images/projects/4.jpg",
     tag: ["All", "Mobile"],
@@ -44,7 +44,7 @@ const projectsData = [
   },
   {
     id: 5,
-    title: "React Firebase Template",
+    title: "Supply Chain Manager",
     description: "Authentication and CRUD operations",
     image: "/images/projects/5.jpg",
     tag: ["All", "Web"],
@@ -53,7 +53,7 @@ const projectsData = [
   },
   {
     id: 6,
-    title: "Full-stack Roadmap",
+    title: "GavelBean Application",
     description: "Project 5 description",
     image: "/images/projects/6.png",
     tag: ["All", "Web"],
