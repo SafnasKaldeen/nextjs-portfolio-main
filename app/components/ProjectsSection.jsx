@@ -15,8 +15,11 @@ const ProjectsSection = () => {
     const getProjects = async () => {
       const response = await fetch("http://localhost:3000/api/projects");
       const projects = await response.json();
+      const data = JSON.parse(projects);
+      const objects = data.items
       await setProjects(projects);
-      console.log(projects);
+      console.log(typeof projects);
+      console.log(typeof data);
     };
     getProjects();
   }, []);
