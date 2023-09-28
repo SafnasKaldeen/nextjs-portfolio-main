@@ -1,79 +1,33 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
-
-const projectsData = [
-  {
-    id: 1,
-    title: "Portfolio Website",
-    description: "Project 1 description",
-    image: "/images/projects/1.jpg",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 2,
-    title: "UBC Website",
-    description: "Project 2 description",
-    image: "/images/projects/2.jpg",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 3,
-    title: "Gear Glide",
-    description: "Project 3 description",
-    image: "/images/projects/3.jpg",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 4,
-    title: "Email CLient Application",
-    description: "Project 4 description",
-    image: "/images/projects/4.jpg",
-    tag: ["All", "Mobile"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 5,
-    title: "Supply Chain Manager",
-    description: "Authentication and CRUD operations",
-    image: "/images/projects/5.jpg",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 6,
-    title: "GavelBean Application",
-    description: "Project 5 description",
-    image: "/images/projects/6.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-];
 
 const ProjectsSection = () => {
   const [tag, setTag] = useState("All");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    const getProjects = async () => {
+      const response = await fetch("http://localhost:3000/api/projects");
+      const projects = await response.json();
+      await setProjects(projects);
+      console.log(projects);
+    };
+    getProjects();
+  }, []);
 
   const handleTagChange = (newTag) => {
     setTag(newTag);
   };
 
-  const filteredProjects = projectsData.filter((project) =>
-    project.tag.includes(tag)
-  );
+  // const filteredProjects = products.filter((project) =>
+  //   project.tag.includes(tag)
+  // );
 
   const cardVariants = {
     initial: { y: 50, opacity: 0 },
@@ -82,10 +36,13 @@ const ProjectsSection = () => {
 
   return (
     <section id="projects">
+      {projects.map((t) => {
+        return <h1 key={t.id}>{t.title}</h1>;
+      })}
       <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
         My Projects
       </h2>
-      <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
+      {/* <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
         <ProjectTag
           onClick={handleTagChange}
           name="All"
@@ -121,7 +78,7 @@ const ProjectsSection = () => {
             />
           </motion.li>
         ))}
-      </ul>
+      </ul> */}
     </section>
   );
 };
