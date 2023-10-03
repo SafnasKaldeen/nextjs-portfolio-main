@@ -39,7 +39,7 @@ const EmailSection = () => {
         </div>
       </div>
       <div className="z-10">
-        <form method="POST" action="/api/submitForm" className="flex flex-col">
+        <form method="POST" action="/api/submit" className="flex flex-col">
           <div className="mb-6">
             <label
               htmlFor="email"
