@@ -118,6 +118,7 @@ const Mail = () => {
           {error &&
             error.map((e) => (
               <div
+                key={e}
                 className={`${
                   success ? "text-green-800" : "text-red-600"
                 } px-5 py-2`}
