@@ -13,7 +13,7 @@ const ProjectsSection = () => {
 
   useEffect(() => {
     const getProjects = async () => {
-      const response = await fetch("http://localhost:3000/api/projects");
+      const response = await fetch("/api/projects");
       const projects = await response.json();
       await setProjects(projects.projects);
       console.log(projects);
