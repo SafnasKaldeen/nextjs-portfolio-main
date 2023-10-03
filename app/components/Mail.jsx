@@ -15,8 +15,8 @@ const Mail = () => {
   if (state.succeeded) {
     return (
       <div class="flex justify-center items-start h-screen">
-        <h5 className="text-xl font-bold text-white my-2 grid md:grid-cols-1 my-12 md:my-12 py-24 gap-4">
-          Thanks for joining
+        <h5 className="text-xl font-bold text-white my-2 grid md:grid-cols-1 my-12 md:my-12 py-0 gap-4">
+          Your form has been submitted!
         </h5>
       </div>
     );
