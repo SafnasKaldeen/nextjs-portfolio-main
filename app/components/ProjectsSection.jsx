@@ -15,11 +15,8 @@ const ProjectsSection = () => {
     const getProjects = async () => {
       const response = await fetch("http://localhost:3000/api/projects");
       const projects = await response.json();
-      const data = JSON.parse(projects);
-      const objects = data.items
-      await setProjects(projects);
-      console.log(typeof projects);
-      console.log(typeof data);
+      await setProjects(projects.projects);
+      console.log(projects);
     };
     getProjects();
   }, []);
@@ -28,9 +25,9 @@ const ProjectsSection = () => {
     setTag(newTag);
   };
 
-  // const filteredProjects = products.filter((project) =>
-  //   project.tag.includes(tag)
-  // );
+  const filteredProjects = projects.filter((project) =>
+    project.tag.includes(tag)
+  );
 
   const cardVariants = {
     initial: { y: 50, opacity: 0 },
@@ -39,13 +36,13 @@ const ProjectsSection = () => {
 
   return (
     <section id="projects">
-      {projects.map((t) => {
+      {/* {projects.map((t) => {
         return <h1 key={t.id}>{t.title}</h1>;
-      })}
+      })} */}
       <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
         My Projects
       </h2>
-      {/* <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
+      <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
         <ProjectTag
           onClick={handleTagChange}
           name="All"
@@ -81,7 +78,7 @@ const ProjectsSection = () => {
             />
           </motion.li>
         ))}
-      </ul> */}
+      </ul>
     </section>
   );
 };
