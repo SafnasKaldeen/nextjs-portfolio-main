@@ -45,6 +45,9 @@ const TAB_DATA = [
         <li className="hover:list-none hover:text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600 hover:border-white">
           MySQL
         </li>
+        <li className="hover:list-none hover:text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600 hover:border-white">
+          MongoDB
+        </li>
       </ul>
     ),
   },
@@ -57,10 +60,13 @@ const TAB_DATA = [
         style={sourceCodePro400.style}
       >
         <li className="hover:list-none hover:text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600 hover:border-white">
-          Fullstack Academy of Code
+          AWS Academy
         </li>
         <li className="hover:list-none hover:text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600 hover:border-white">
-          University of California, Santa Cruz
+          University of Moratuwa, Sri Lanka.
+        </li>
+        <li className="hover:list-none hover:text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600 hover:border-white">
+          Coursera
         </li>
       </ul>
     ),
@@ -74,10 +80,10 @@ const TAB_DATA = [
         style={sourceCodePro400.style}
       >
         <li className="hover:list-none hover:text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600 hover:border-white">
-          AWS Cloud Practitioner
+          Machine Learning A-Z™: Hands-On Python & R In Data Science
         </li>
         <li className="hover:list-none hover:text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600 hover:border-white">
-          Google Professional Cloud Developer
+          AWS Academy Cloud Foundations
         </li>
       </ul>
     ),
