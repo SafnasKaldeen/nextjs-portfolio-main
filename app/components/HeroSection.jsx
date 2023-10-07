@@ -50,7 +50,7 @@ const HeroSection = () => {
               href="/"
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3"
             >
-              <Link href="https://uniofmora-my.sharepoint.com/:b:/g/personal/safnaskm_20_uom_lk/Eald6bL7zzRPpIdPBnbI1VQBkbX23Ai3OTjm3SD_Gyi3SA">
+              <Link href="https://uniofmora-my.sharepoint.com/:b:/g/personal/safnaskm_20_uom_lk/Eald6bL7zzRPpIdPBnbI1VQB57B7EYVkQwyyk8xof6TkHg?e=Hnymgp">
                 <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
                   Download CV
                 </span>
