@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, cache } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
@@ -13,7 +13,7 @@ const ProjectsSection = () => {
 
   useEffect(() => {
     const getProjects = async () => {
-      const response = await fetch("/api/projects");
+      const response = await fetch("/api/projects", { cache: "no-cache" });
       const projects = await response.json();
       await setProjects(projects.projects);
       console.log(projects);
