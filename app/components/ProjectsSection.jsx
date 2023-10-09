@@ -13,7 +13,7 @@ const ProjectsSection = () => {
 
   useEffect(() => {
     const getProjects = async () => {
-      const response = await fetch("/api/projects", { cache: "no-cache" });
+      const response = await fetch("/api/projects", { cache: "no-store" });
       const projects = await response.json();
       await setProjects(projects.projects);
       console.log(projects);
